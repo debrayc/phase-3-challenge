@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./database/database_test.js"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "DeBray Carpenter",
+  "license": "ISC",
+  "dependencies": {
+    "pg-promise": "^6.10.0"
+  }
 }
