@@ -4,6 +4,7 @@
   "description": "Part-1 of Phase 3 Challenge",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "DeBray Carpenter",
