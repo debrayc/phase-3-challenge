@@ -24,6 +24,27 @@ body {
   flex: 1;
 }
 
+/* MODAL */
+#modal-overlay {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+#shopping-cart {
+  height: 60%;
+  width: 50%;
+  justify-content: center;
+  margin: auto;
+  z-index: 2;
+}
+
+.hidden {
+  display: none;
+}
+
 /* HEADER */
 .site-header {
   flex: 0;
@@ -46,6 +67,30 @@ body {
 
 .site-header button {
   font-size: 20px;
+}
+
+/* MODAL */
+#modal-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  background-color: black;
+  z-index: 2;
+}
+
+#shopping-cart {
+  background-color: grey;
+  height: 50%;
+  width: 50%;
+  margin: 20%;
+  position: fixed;
+  justify-content: center;
+  z-index: 5;
+}
+
+.hidden {
+  display: none;
 }
 
 /* SIDEBAR */
