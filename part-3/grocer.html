@@ -9,17 +9,24 @@
   <body class="flex flex-column">
     <header class="site-header flex flex-row-between">
       <h1>Grocer</h1>
-      <button type="button" id="cart-button">
+      <button type="button" id="cart-button" onclick="openCart()">
         Cart
-        &nbsp;<span id="cart-item-count">(3)</span>
+        &nbsp;<span id="cart-item-count">(0)</span>
       </button>
     </header>
-    <div class="shopping-cart">
-      <span><h3>Cart</h3></span><span><a onclick="closeModal()" id="close-cart">X</a></span>
-      <ul id="cart-items">
+    <div id="modal-overlay" class="hidden">
+      <div id="shopping-cart" class="hidden">
+        <span>
+          <h3>Cart</h3>
+        </span>
+        <span>
+          <button onclick="closeCart()" id="close-cart">X</button>
+        </span>
+        <ul id="cart-items">
 
-      </ul>
-      <button type="button" id="clear-cart" onclick="clearCart()">CLEAR</button>
+        </ul>
+        <button type="button" id="clear-cart" onclick="clearCart()">CLEAR</button>
+      </div>
     </div>
 
     <div class="flex flex-full">
