@@ -18,15 +18,11 @@ CREATE TABLE shoppers(
 CREATE TABLE orders(
   order_id SERIAL PRIMARY KEY,
   shopper_id INTEGER REFERENCES shoppers(shopper_id)
-  total_cost MONEY REFERENCES sum(cart(item_price)) WHERE cart_id=order_id
+  order_date TIMESTAMP 
 );
 
 CREATE TABLE cart(
   cart_id INTEGER REFERENCES orders(order_id),
   shopper_id INTEGER REFERENCES shoppers(shopper_id),
   item_id INTEGER REFERENCES products(product_id),
-  item_price MONEY REFERENCES products(price)
 );
-
-CREATE VIEW real_shoppers AS
-  SELECT count(order_id), shopper_name FROM orders LEFT JOIN shoppers;
